@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import 'react-bulma-components/dist/react-bulma-components.min.css';
-
+import './hover-overwrite.css';
 const Header = ({ siteTitle }) => (
 
   <header>
@@ -23,16 +23,16 @@ const Header = ({ siteTitle }) => (
 
           <div id="navbarBasicExample" className="navbar-menu">
               <div className="navbar-start">
-                  <a className="navbar-item has-text-white">
+                  <a className="navbar-item has-text-white hover-overwrite">
                       Home
                   </a>
 
-                  <a className="navbar-item has-text-white">
+                  <a className="navbar-item has-text-white hover-overwrite">
                       Documentation
                   </a>
 
                   <div className="navbar-item has-dropdown is-hoverable">
-                      <a className="navbar-link has-text-white">
+                      <a className="navbar-link has-text-white hover-overwrite">
                           More
                       </a>
 
@@ -56,14 +56,7 @@ const Header = ({ siteTitle }) => (
 
               <div className="navbar-end">
                   <div className="navbar-item">
-                      <div className="buttons">
-                          <a className="button is-primary">
-                              <strong>Sign up</strong>
-                          </a>
-                          <a className="button is-light">
-                              Log in
-                          </a>
-                      </div>
+
                   </div>
               </div>
           </div>
