@@ -8,14 +8,19 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+
+      <section className="section">
+          <div className="container">
+              <h1 className="title">Welcome to the Gatsby Bulma Layout</h1>
+              <h2 className="subtitle">
+                  This Template uses the <a href={"https://bulma.io/"} target={"new"}>Bulma CSS Framework</a>
+                  with the <a href={"https://www.gatsbyjs.org/"} target={"new"}>GatsbyJS Static Site Generator</a>.
+              </h2>
+              <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+                  <Image />
+              </div>
+          </div>
+      </section>
   </Layout>
 )
 

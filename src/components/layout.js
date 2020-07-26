@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,20 +25,32 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div className={"container mt-2"}>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
+
+
+
+
+
+      {/*<footer className={"container"}>*/}
+      {/*    © {new Date().getFullYear()},{` `}*/}
+      {/*      <a href={"https://github.com/donniecode1983/gatsbyjs-bulma-layout"}>Gatsby Bulma Layout</a>*/}
+      {/*      <br />*/}
+      {/*      Built with*/}
+      {/*    {`  `}*/}
+      {/*    <a href="https://www.gatsbyjs.org">Gatsby</a>*/}
+      {/*  </footer>*/}
+        <footer className="footer">
+            <div className="content has-text-centered">
+                <p>
+                    <strong>{data.site.siteMetadata.title}</strong> by <a href="https://github.com/donniecode1983">Donovan Murphy</a>. The source code is
+                    licensed { ` ` }
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+                </p>
+            </div>
+        </footer>
+
     </>
   )
 }
