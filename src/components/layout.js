@@ -25,22 +25,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className={"container mt-2"}>
+      <div className={"container mt-2 is-fluid"}>
         <main>{children}</main>
       </div>
 
-
-
-
-
-      {/*<footer className={"container"}>*/}
-      {/*    © {new Date().getFullYear()},{` `}*/}
-      {/*      <a href={"https://github.com/donniecode1983/gatsbyjs-bulma-layout"}>Gatsby Bulma Layout</a>*/}
-      {/*      <br />*/}
-      {/*      Built with*/}
-      {/*    {`  `}*/}
-      {/*    <a href="https://www.gatsbyjs.org">Gatsby</a>*/}
-      {/*  </footer>*/}
         <footer className="footer">
             <div className="content has-text-centered">
                 <p>
